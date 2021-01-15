@@ -58,3 +58,10 @@ Feature: Login
      |username|password|
      |oodukudu@gmail.com|oodukudu1|
      |oodukudu@yahoo.com|oodukudu200|
+
+       Scenario: Invalid Login with parameters
+         And I enter the username "oodukudu.com.uk"
+         And I enter the password "oodukudu100"
+         And I click on the sign in button
+         Then I should not be able to log-in
+         And I close the broswer
