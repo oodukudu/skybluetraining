@@ -2,7 +2,7 @@ Feature: WishList
   As a user of giftrete, I want to create wishlist for myself
 
   Scenario: WishList
-    Given I navigate to dev.giftrt.com
+    Given I navigate to www.giftrete.com
     And I click on wishlist
     And i click on create wishlist
     When i fill in all the necessary information

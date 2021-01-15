@@ -9,15 +9,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Login {
+
+    WebDriver driver;
+
     @Given("^I navigate to dev.giftrt.com$")
     public void iNavigateToDevGiftrtCom() throws Throwable {
 
         //if you didn't update the Path system variable to add the full directory path to the executable as above mentioned then doing this directly through code
-        System.setProperty("webdriver.gecko.driver", "/Users/oyinodukudu/IdeaProjects/skybluetraining/src/test/resources/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "/Users/oyinodukudu/IdeaProjects/geckodriver");
 
-        WebDriver driver = new FirefoxDriver();
+        driver = new FirefoxDriver();
 
-        String appUrl = "http://www.dev.giftrt.com";
+        String appUrl = "https://www.google.com";
         driver.get(appUrl);
     }
 
@@ -97,5 +100,12 @@ public class Login {
     public void iLogOut() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
        // throw new PendingException();
+    }
+
+    @And("^I close the broswer$")
+    public void iCloseTheBroswer() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //driver.close();
+        driver.quit();
     }
 }

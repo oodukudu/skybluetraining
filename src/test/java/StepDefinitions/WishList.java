@@ -7,10 +7,10 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class WishList {
-    @Given("^I navigate to giftrete site$")
-    public void i_navigate_to_giftrete_site() {
+    @Given("^I navigate to www.giftrete.com$")
+    public void iNavigateToWwwGiftreteCom() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        //throw new PendingException();
+        throw new PendingException();
     }
 
     @And("^I click on wishlist$")
@@ -42,4 +42,6 @@ public class WishList {
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }
+
+
 }

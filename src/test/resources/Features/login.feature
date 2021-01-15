@@ -11,6 +11,7 @@ Feature: Login
     And I enter the password
     And I click on the sign in button
     Then I should be able to log-in
+    And I close the broswer
 
     @invalid @regression
   Scenario: Login with invalid password
@@ -18,6 +19,7 @@ Feature: Login
     And I enter incorrect password
     And I click on the sign in button
     Then I should not be able to log-in
+    And I close the broswer
 
       @invalid
   Scenario: Login with invalid username
@@ -25,6 +27,7 @@ Feature: Login
     And I enter valid password
     And I click on the sign in button
     Then I should not be able to log-in
+    And I close the broswer
 
 
   Scenario: Login with parameters
@@ -32,6 +35,7 @@ Feature: Login
     And I enter the password "oodukudu1"
     And I click on the sign in button
     Then I should be able to log-in
+    And I close the broswer
 
 
   Scenario: Invalid Login with parameters
@@ -39,6 +43,7 @@ Feature: Login
     And I enter the password "oodukudu100"
     And I click on the sign in button
     Then I should not be able to log-in
+    And I close the broswer
 
 
    Scenario Outline: login with multiple users
@@ -47,6 +52,7 @@ Feature: Login
      And I click on the sign in button
      Then I should be able to log-in
      And I log out
+     And I close the broswer
 
      Examples:
      |username|password|
